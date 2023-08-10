@@ -1,0 +1,629 @@
+/*
+-------------------------------------------------------------------------------
+Copyright (c) 2023, Sueun Cho, DoHyun Lim
+
+Project: BlockTrip
+Version: 2.0.0 (RC)
+Date: August 8, 2023
+File name: App.css
+
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-------------------------------------------------------------------------------
+*/
+
+/* Styling for the title */
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #5abcd7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the header container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  background-color: #fdfdff;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Styling for individual sections */
+.section {
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f1f3f6;
+}
+
+.wallet-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instruction-section p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.token-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styling for token input */
+.token-input {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #2b6f97;
+  border-radius: 5px;
+  outline: none;
+  color: #555;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.token-input::placeholder {
+  color: #999;
+}
+
+.tokenURI-display {
+  flex: 1;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #2b6f97;
+  background-color: #e8f6ff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tokenURI-display span {
+  color: #2b6f97;
+  font-weight: bold;
+}
+
+.tokenURI-display em {
+  font-style: normal;
+  color: #ff6b6b;
+}
+
+.tokenURI-display:hover {
+  background-color: #d1e5f0;
+}
+
+/* Styling for the connect button */
+.connect-button {
+  background-color: #5abcd7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connect-button:hover {
+  background-color: #46a1c6;
+}
+
+/* Styling for the check button */
+.check-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.check-button:hover {
+  background-color: #45a049;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the balance checker container */
+.balance-checker-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the balance checker content */
+.balance-checker-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 30px;
+}
+
+/* Styling for balance text */
+.balance-text {
+  margin-left: 10px;
+}
+
+/* Styling for user icon container */
+.user-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Add this style to your existing CSS */
+.icon-spacer {
+  width: 10px;
+}
+
+/* Styling for the art options selection */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  text-align: center;
+}
+
+.side-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the dropdown selects */
+.side-bar select {
+  width: 70%;
+  margin: 10px 0;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; 
+  font-size: 1rem;
+}
+
+/* Styling for the generate image button */
+.side-bar button {
+  background-color: #5abcd7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.side-bar button:hover {
+  background-color: #46a1c6;
+}
+
+/* Styling for the generated image and its list */
+.side-bar img {
+  width: 100%; 
+  margin-top: 20px; 
+  border-radius: 10px;
+}
+
+.side-bar {
+  flex: 0.5;
+  margin-right: 20px;
+}
+
+.side-bar .history {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.art-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.art-info {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #5abcd7;
+}
+
+.selectors-container {
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+  gap: 20px;
+}
+
+.selector select {
+  width: 200px;
+  padding: 8px 12px;
+  border: 2px solid #5abcd7;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.history img {
+  width: 40%;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.history {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.history-images > div {
+  flex: 1;
+  min-width: calc(100% / 3 - 10px);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-container {
+  padding: 20px;
+  margin-top: 40px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; 
+  background-color: #ffffff;  
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-container button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.history-images img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+@keyframes slideImage {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.button-group button {
+  width: 100%; 
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.button-group button:hover {
+  background-color: #2980b9;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-section {
+  flex: 1;
+  max-width: 50%;
+}
+
+/*트립체인 설명*/
+
+.blocktrip-container {
+  font-family: 'Arial', sans-serif;
+  background-color: #e8f6ff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.blocktrip-title {
+  font-size: 24px;
+  color: #2b6f97;
+  margin-bottom: 15px;
+}
+
+.blocktrip-container p, 
+.blocktrip-container ul {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.blocktrip-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blocktrip-container li {
+  margin-bottom: 10px;
+}
+
+.blocktrip-container em {
+  color: #2b6f97;
+}
+
+.blocktrip-container .emoji {
+  font-size: 30px;
+}
+
+/*귀여운 버튼*/
+
+button {
+  background-color: #FFDDAA;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #FFAA77;
+}
+
+.cute-image {
+  max-width: 100%;
+  border: 5px dashed #FF88CC;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+h1 {
+  color: #89C9FA;
+  margin-bottom: 10px;
+}
+
+ul.feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul.feed li {
+  color: #89C9FA;
+  font-size: 1.5em;
+}
+
+/*미디어 쿼리*/
+@media (max-width: 900px) {
+  .history-images > div {
+      min-width: calc(100% / 4 - 20px); 
+  }
+}
+
+/* 화면 크기가 작을 때 (예: mobile) */
+@media (max-width: 600px) {
+  .history-images > div {
+      min-width: calc(100% / 3 - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+      padding: 10px;
+  }
+
+  .title {
+      font-size: 18px;
+  }
+
+  .blocktrip-title {
+      font-size: 16px;
+  }
+
+  .token-input {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  .tokenURI-display {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) { 
+  .selectors-container {
+      flex-direction: row;
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+  }
+}
+
+.listed-nfts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.nft-box {
+  background-color: rgba(240, 240, 240, 0.8);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nft-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nft-id {
+  font-size: 14px;
+}
+
+.K-purchase-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.K-token-input {
+  margin-top: 20px;
+  flex: 0.48;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.K-purchase-section button {
+  flex: 0.48;
+  width: 100%; 
+  height: 50px; 
+  box-sizing: border-box;
+  font-size: 16px; 
+  line-height: 1.5; 
+  text-align: center;
+  padding: 0; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.K-token-input {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.K-purchase-section button {
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  background-color: #343a40; /* 약간의 어두운 색상의 배경 */
+  padding: 20px 0;
+  text-align: center; /* 텍스트를 가운데 정렬 */
+  color: #f8f9fa; /* 텍스트 색상 */
+  font-size: 14px; /* 기본 글자 크기 */
+  border-top: 4px solid #ff6347; /* 상단 경계선에 약간의 색상 추가 */
+  position: relative;
+  bottom: 0;
+}
+
+.footer a {
+  color: #f8f9fa; /* 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  margin: 0 10px;
+  transition: color 0.3s; /* 색상 전환 효과 */
+}
+
+.footer a:hover {
+  color: #ff6347; /* 마우스 오버시 색상 변경 */
+}
+
